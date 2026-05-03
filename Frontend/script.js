@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Feijoada Completa ou Light',
             price: 'R$ 49,90 / pessoa',
             images: ['Imagem11.jpg'],
-            ingredients: ['Carne seca', 'Bacon', 'Lombo suíno', 'Costelinha suína', 'Linguiça calabresa', 'Paio', 'Arroz branco', 'Feijão preto', 'Farofa', 'Couve manteiga', 'Laranjas', 'Vinagrete'],
+            ingredients: ['Carne seca', 'Bacon', 'Lombo suíno', 'Costelinha suína', 'Linguiça calabresa', 'Paio', 'Arroz branco', 'Feijão preto', 'Farofa', 'Couve manteiga', 'Laranjas', 'Vinagrete', 'Rabo e pé suíno (opcional)'],
             history: 'Diferente da lenda popular, a feijoada não nasceu nas senzalas com restos de carnes, mas sim como uma evolução sofisticada dos grandes cozidos europeus adaptada ao feijão preto brasileiro. Especialistas indicam que ela se consolidou no século XIX como um prato de elite nos centros urbanos, exigindo uma técnica de preparo complexa e lenta que dura até 24 horas.\n\nA nossa feijoada é um ritual de paciência e sabor. Cada carne é tratada individualmente para garantir o ponto perfeito, enquanto o caldinho de feijão ganha corpo e personalidade. Acompanhada de couve bem fininha, laranjas frescas e uma farofa crocante, ela deixa de ser apenas uma refeição para se tornar a tradução definitiva da alma gastronômica do Brasil.'
         }
     };
@@ -149,10 +149,17 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (scrollId) {
                 const element = document.getElementById(scrollId);
                 if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // Compensar o header fixo
+                    // Garantir que estamos na aba do cardápio
+                    switchTab('cardapio');
+                    
                     const headerHeight = document.querySelector('header').offsetHeight;
-                    window.scrollBy(0, -headerHeight - 20);
+                    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerHeight - 20;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
                 }
             }
         });
