@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Landim na Cozinha | Eventos Gastronômicos</title>
+    <meta name="description" content="Experiências gastronômicas marcantes em festas e eventos com Chef Leandro Landim. Comida no tacho, churrasco e feijoada.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/daniel" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo-area" id="home-trigger">
+                <h1>Lê Landim</h1>
+                <span>NA COZINHA</span>
+            </div>
+            <nav>
+                <ul class="nav-tabs">
+                    <li class="active" data-tab="missao">Missão</li>
+                    <li data-tab="chef">Chef</li>
+                    <li data-tab="cardapio">Cardápio</li>
+                    <li data-tab="informacoes">Informações</li>
+                    <li data-tab="contato">Contato</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- MISSÃO -->
+        <section id="missao" class="tab-content active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Nossa Missão</h2>
+                    <p>Proporcionar experiências gastronômicas marcantes em festas e eventos, oferecendo alimentos de qualidade, sabores inesquecíveis ao seu paladar, transformando cada ocasião em um momento especial e memorável para clientes e convidados.</p>
+                </div>
+                <div class="hero-image">
+                    <div class="logo-frame">
+                        <img src="Imagem1.jpg" alt="Lê Landim na Cozinha Logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHEF -->
+        <section id="chef" class="tab-content">
+            <div class="hero">
+                <div class="hero-image">
+                    <img src="Imagem2.jpg" alt="Chef Leandro Landim" style="border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
+                </div>
+                <div class="hero-content">
+                    <h2>Sobre o Chef</h2>
+                    <p>Meu nome é <strong>Leandro Landim</strong>. Cozinhar, para mim, vai além de seguir receitas; é sobre honrar raízes, dominar o fogo. Transformo ingredientes selecionados em experiências memoráveis. Seja no calor do fogão a lenha ou na precisão de uma cozinha industrial, meu compromisso é o mesmo: entregar o sabor autêntico que une as pessoas ao redor da mesa.</p>
+                    <p>Com o "Lê Landim na Cozinha", a rusticidade do campo encontra a técnica profissional para criar algo único.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARDÁPIO -->
+        <section id="cardapio" class="tab-content">
+            <h2 class="section-title">Nosso Cardápio</h2>
+            
+            <div class="dish-nav-bar">
+                <span class="dish-nav-item" data-dish="galinhada">Galinhada</span>
+                <span class="dish-nav-item" data-dish="paella">Paella Caipira</span>
+                <span class="dish-nav-item" data-dish="baiao">Baião de Dois</span>
+                <span class="dish-nav-item" data-dish="braga">Arroz de Braga</span>
+                <span class="dish-nav-item" data-dish="carreteiro">Arroz Carreteiro</span>
+                <span class="dish-nav-item" data-dish="biro-biro">Arroz Biro Biro</span>
+                <span class="dish-nav-item" data-dish="churrasco-prime">Churrasco Prime</span>
+                <span class="dish-nav-item" data-dish="churrasco-completo">Churrasco Completo</span>
+                <span class="dish-nav-item" data-dish="feijoada">Feijoada</span>
+                <span class="dish-nav-item" data-scroll="saladas">Saladas</span>
+            </div>
+            
+            <!-- Comidas no Tacho -->
+            <div class="menu-category">
+                <h3 class="category-title">Comidas no Tacho</h3>
+                <p>Sabores intensos preparados na hora para seus convidados.</p>
+                <div class="menu-grid">
+                    <div class="menu-card" data-dish="galinhada">
+                        <div class="card-header"><h3>Galinhada</h3></div>
+                        <div class="card-img"><img src="Imagem3.jpg" alt="Galinhada"></div>
+                        <div class="card-body">
+                            <span class="price">R$ 39,90 / pessoa</span>
+                            <p class="know-more">saber mais</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-dish="paella">
+                        <div class="card-header"><h3>Paella Caipira</h3></div>
+                        <div class="card-img"><img src="Imagem4.jpg" alt="Paella Caipira"></div>
+                        <div class="card-body">
+                            <span class="price">R$ 45,90 / pessoa</span>
+                            <p class="know-more">saber mais</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-dish="baiao">
+                        <div class="card-header"><h3>Baião de Dois</h3></div>
+                        <div class="card-img"><img src="Imagem5.jpg" alt="Baião de Dois"></div>
+                        <div class="card-body">
+                            <span class="price">R$ 49,90 / pessoa</span>
+                            <p class="know-more">saber mais</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-dish="braga">
+                        <div class="card-header"><h3>Arroz de Braga</h3></div>
+                        <div class="card-img"><img src="Imagem6.jpg" alt="Arroz de Braga"></div>
+                        <div class="card-body">
+                            <span class="price">R$ 49,90 / pessoa</span>
+                            <p class="know-more">saber mais</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-dish="carreteiro">
+                        <div class="card-header"><h3>Arroz Carreteiro</h3></div>
+                        <div class="card-img"><img src="Imagem8.jpg" alt="Arroz Carreteiro"></div>
+                        <div class="card-body">
+                            <span class="price">R$ 49,90 / pessoa</span>
+                            <p class="know-more">saber mais</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-dish="biro-biro">
+                        <div class="card-header"><h3>Arroz Biro Biro</h3></div>
+                        <div class="card-img"><img src="Imagem7.jpg" alt="Arroz Biro Biro"></div>
+                        <div class="card-body">
+                            <span class="price">R$ 25,00 / pessoa</span>
+                            <p class="know-more">saber mais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="menu-divider">
+
+            <!-- Churrasco -->
+            <div class="menu-category">
+                <h3 class="category-title">Churrasco</h3>
+                <div class="menu-grid">
+                    <div class="menu-card" data-dish="churrasco-prime">
+                        <div class="card-header"><h3>Churrasco Prime (Opção 1)</h3></div>
+                        <div class="card-img"><img src="Imagem9.jpg" alt="Churrasco Prime"></div>
+                        <div class="card-body">
+                            <span class="price">R$ 120,00 / pessoa</span>
+                            <p class="description">Seleção Carnes prime: Picanha, Fraldinha, Maminha, Bife Ancho, Bife de Chorizo.</p>
+                            <p class="know-more">saber mais</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-dish="churrasco-completo">
+                        <div class="card-header"><h3>Churrasco Completo (Opção 2)</h3></div>
+                        <div class="card-img"><img src="Imagem10.jpg" alt="Churrasco Completo"></div>
+                        <div class="card-body">
+                            <span class="price">R$ 79,90 / pessoa</span>
+                            <p class="know-more">saber mais</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="note">Acompanha delicioso molho chimichurri Argentino preparado pelo chef.</p>
+            </div>
+
+            <hr class="menu-divider">
+
+            <!-- Feijoada -->
+            <div class="menu-category">
+                <h3 class="category-title">Feijoada</h3>
+                <div class="menu-grid">
+                <div class="menu-card" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;" data-dish="feijoada">
+                        <div class="card-header"><h3>Feijoada Completa ou Light</h3></div>
+                        <div class="card-img"><img src="Imagem11.jpg" alt="Feijoada"></div>
+                        <div class="card-body">
+                            <span class="price">R$ 49,90 / pessoa</span>
+                            <p class="know-more">saber mais</p>
+                            <p class="note">A versão completa inclui rabo e pé suíno.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="menu-divider">
+
+            <!-- Saladas -->
+            <div class="menu-category" id="saladas">
+                <h3 class="category-title">Saladas</h3>
+                <p>Todos nossos pratos incluem saladas variadas, acompanhadas do molho de temperos do chef.</p>
+                <div class="hero">
+                    <div class="hero-image">
+                        <img src="Imagem12.jpg" alt="Saladas">
+                    </div>
+                    <div class="hero-content">
+                        <h3>Frescor e Sabor</h3>
+                        <p>Utilizamos ingredientes frescos e selecionados para garantir que o acompanhamento seja tão marcante quanto o prato principal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFORMAÇÕES -->
+        <section id="informacoes" class="tab-content">
+            <h2 class="section-title">Informações Importantes</h2>
+            <div class="menu-category" id="utensilios">
+                <h3 class="category-title">Utensílios e Apresentação</h3>
+                <p style="text-align: center;">Utilizamos utensílios de alto padrão com apresentação profissional para garantir a melhor experiência no seu evento.</p>
+            </div>
+            
+            <div class="menu-grid" style="margin-top: 2rem;">
+                <div class="menu-card" style="padding: 2rem;">
+                    <h3>O que levamos</h3>
+                    <p style="color: #666; font-style: italic;">Informações em breve...</p>
+                </div>
+                <div class="menu-card" style="padding: 2rem;">
+                    <h3>O que não levamos</h3>
+                    <p style="color: #666; font-style: italic;">Informações em breve...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="tab-content">
+            <div class="contact-container">
+                <h2>Peça já seu orçamento</h2>
+                <p>Será um prazer contribuir para que seu evento seja ainda melhor com Lê Landim na Cozinha.</p>
+                <div class="contact-info">
+                    <a href="tel:11996976004" class="phone-btn">(11) 99697-6004</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE DETALHE DO PRATO (NÃO FLUTUANTE) -->
+        <section id="detalhe-prato" class="tab-content">
+            <div class="detail-header">
+                <button id="back-to-menu" class="back-btn">&larr; Voltar ao Cardápio</button>
+            </div>
+            <div class="hero">
+                <div class="hero-image">
+                    <img id="detail-main-img" src="" alt="Imagem do Prato">
+                </div>
+                <div class="hero-content">
+                    <h2 id="detail-title">Título do Prato</h2>
+                    <span id="detail-price" class="price">R$ 0,00</span>
+                    
+                    <div class="info-section">
+                        <h4>Ingredientes</h4>
+                        <ul id="detail-ingredients" class="detail-ing-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dish-history-section">
+                <h3>A História deste Prato</h3>
+                <p id="detail-history">História...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lê Landim na Cozinha. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
