@@ -2,8 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.nav-tabs li');
     const contents = document.querySelectorAll('.tab-content');
     const logoArea = document.getElementById('home-trigger');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mainNav = document.getElementById('main-nav');
 
     function switchTab(tabId) {
+        // Close mobile menu if open
+        if (mobileMenuBtn.classList.contains('open')) {
+            toggleMobileMenu();
+        }
         // Update tabs active state
         tabs.forEach(t => {
             if (t.getAttribute('data-tab') === tabId) {
@@ -38,6 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
             switchTab('missao');
         });
     }
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+        mobileMenuBtn.classList.toggle('open');
+        mainNav.classList.toggle('open');
+    }
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (mainNav.classList.contains('open') && 
+            !mainNav.contains(e.target) && 
+            !mobileMenuBtn.contains(e.target)) {
+            toggleMobileMenu();
+        }
+    });
 
     // Dish Data for section detail
     const dishData = {
