@@ -394,18 +394,19 @@ main {
 }
 
 .logo-frame {
-    width: 450px;
-    height: 450px;
+    width: 350px; /* Tamanho mediano */
+    height: 350px;
     border-radius: 50%;
-    border: 15px solid #ffffff;
+    border: 10px solid var(--primary); /* Borda marrom */
+    background-color: #d2b48c; /* Fundo em um tom de marrom claro (tan) bem diferente de fora */
     box-shadow: 0 20px 50px rgba(0,0,0,0.15);
     overflow: hidden;
-    background-color: var(--bg-dark);
     transition: var(--transition);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 35px; /* Padding generoso para evitar que a logo toque as bordas */
+    padding: 30px; /* Espaço para não encostar na borda circular */
+    margin: 0 auto;
 }
 
 .logo-frame:hover {
@@ -415,9 +416,7 @@ main {
 .logo-frame img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+    object-fit: contain; /* Não corta nenhuma parte da imagem */
 }
 .hero-image img {
     max-width: 100%;
@@ -735,7 +734,11 @@ main {
         width: 250px;
         height: 250px;
         padding: 15px;
-        border-width: 8px;
+        border-width: 6px;
+    }
+
+    .logo-frame img {
+        max-height: 100%;
     }
 
     .hero-image img {
@@ -780,6 +783,8 @@ main {
 
     .detail-ing-list {
         columns: 1;
+        text-align: left;
+        display: inline-block;
     }
 
     .contact-info {
@@ -810,6 +815,64 @@ main {
 
     .hero-content h2 {
         font-size: 1.8rem;
+    }
+}
+
+/* ==========================================
+   INFO CARDS - Aba Informações
+   ========================================== */
+.info-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem 0 4rem 0;
+}
+
+.info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    border: 1px solid rgba(139, 69, 19, 0.1);
+    border-top: 4px solid var(--accent);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+}
+
+.info-card-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.info-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.info-card p {
+    font-size: 0.98rem;
+    color: #555;
+    line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+    .info-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem 0 3rem 0;
+    }
+
+    .info-card {
+        padding: 2rem 1.5rem;
+        text-align: left;
     }
 }
 
@@ -957,22 +1020,33 @@ main {
     }
 
     .footer-container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding-bottom: 3rem;
-        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding-bottom: 2rem;
+        text-align: left;
     }
 
-    .footer-col h3::after {
-        margin: 0.5rem auto 0 auto;
+    .branding-col .footer-logo h2 {
+        font-size: 1.6rem;
+    }
+
+    .footer-col h3 {
+        font-size: 1rem;
     }
 
     .footer-tagline {
-        margin: 0 auto;
+        font-size: 0.8rem;
+        margin: 0;
     }
 
     .footer-contact-info li {
-        justify-content: center;
+        justify-content: flex-start;
+        font-size: 0.8rem;
+    }
+    
+    .footer-info-icon {
+        width: 16px;
+        height: 16px;
     }
 
     .footer-links li:hover {
