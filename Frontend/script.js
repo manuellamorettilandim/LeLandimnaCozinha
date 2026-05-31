@@ -4,18 +4,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoArea = document.getElementById('home-trigger');
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mainNav = document.getElementById('main-nav');
+    const mobileBottomItems = document.querySelectorAll('.mobile-nav-item');
 
     function switchTab(tabId) {
-        // Close mobile menu if open
-        if (mobileMenuBtn.classList.contains('open')) {
+        // Close mobile menu if open (safely checking)
+        if (mobileMenuBtn && mobileMenuBtn.classList.contains('open')) {
             toggleMobileMenu();
         }
-        // Update tabs active state
+        
+        // Update desktop tabs active state
         tabs.forEach(t => {
             if (t.getAttribute('data-tab') === tabId) {
                 t.classList.add('active');
             } else {
                 t.classList.remove('active');
+            }
+        });
+
+        // Update mobile bottom nav items active state
+        mobileBottomItems.forEach(item => {
+            if (item.getAttribute('data-tab') === tabId) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
             }
         });
 
@@ -35,6 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const target = tab.getAttribute('data-tab');
+            if (target) switchTab(target);
+        });
+    });
+
+    // Mobile bottom navigation click event listeners
+    mobileBottomItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const target = item.getAttribute('data-tab');
             if (target) switchTab(target);
         });
     });
@@ -195,6 +214,15 @@ document.addEventListener('DOMContentLoaded', () => {
             switchTab('cardapio');
         });
     }
+
+    // Footer navigation click event listeners
+    const footerTabs = document.querySelectorAll('[data-footer-tab]');
+    footerTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-footer-tab');
+            if (target) switchTab(target);
+        });
+    });
 
     window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
