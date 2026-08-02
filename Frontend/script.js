@@ -130,14 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
         'churrasco-prime': {
             title: 'Churrasco Prime',
             price: 'R$ 120,00 / pessoa',
-            images: ['Imagem9.jpg'],
+            images: ['IMG-20260715-WA0016~2.jpg'],
             ingredients: ['Picanha', 'Fraldinha', 'Maminha', 'Bife Ancho', 'Bife de Chorizo', 'Espeto de lombo', 'Linguiça Toscana', 'Sobrecoxa desossada', 'Coração de frango', 'Queijo coalho', 'Pão de alho', 'Arroz Biro Biro', 'Farofa', 'Vinagrete', 'Maionese'],
             history: 'O churrasco gaúcho tem raízes profundas que remontam ao século XVII, unindo técnicas indígenas de assar carne em buracos no chão com a lida dos tropeiros das Missões jesuíticas. Originalmente, era uma refeição de sobrevivência nos campos, exigindo apenas fogo, uma faca afiada, estacas de madeira e sal grosso para extrair o melhor sabor do gado criado livre.\n\nNossa versão Prime é uma celebração dessa técnica ancestral aplicada aos cortes mais nobres da pecuária moderna. O segredo está no controle preciso do fogo e no respeito ao tempo de maturação da carne, garantindo que cada corte chegue à mesa com a suculência e o sabor defumado que só a verdadeira tradição do fogo de chão pode proporcionar.'
         },
         'churrasco-completo': {
             title: 'Churrasco Completo',
             price: 'R$ 79,90 / pessoa',
-            images: ['Imagem10.jpg'],
+            images: ['IMG-20260715-WA0016~2.jpg'],
             ingredients: ['Contrafilé Bovino', 'Fraldinha', 'Espeto de lombo', 'Linguiça Toscana', 'Coxinha de frango', 'Queijo coalho', 'Pão de alho', 'Arroz branco', 'Farofa', 'Vinagrete', 'Maionese'],
             history: 'O Churrasco Completo é a essência do domingo brasileiro. Ele representa a evolução da cultura do pampa para o ambiente familiar, onde a variedade de cortes e acompanhamentos transforma a refeição em um evento social que dura horas. É a celebração da amizade e da boa mesa, onde cada ingrediente tem seu papel fundamental.\n\nAlém da seleção rigorosa das carnes, nosso diferencial está nos detalhes: desde o pão de alho perfeitamente dourado até o nosso chimichurri artesanal preparado pelo chef, que utiliza ervas frescas para realçar o sabor natural da gordura braseada. É um banquete que honra a tradição e abraça o paladar contemporâneo.'
         },
